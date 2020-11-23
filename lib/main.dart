@@ -10,10 +10,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Simple App',
         theme: ThemeData(primaryColor: Colors.green[500]),
-        home: Scaffold(
-            appBar: AppBar(title: Text("A simple app!")),
-            body: Center(
-              child: Text("This is my app! Really?"),
-            )));
+        home: _HomePage();
+  }
+}
+
+class HomePage extends StatefulWidget {
+  @override 
+  _HomePage createState() => _HomePage(); 
+}
+
+class _HomePage extends State<HomePage> {
+  Widget build(BuildContext context) { 
+    return Scaffold(
+      body: Center(child: Text("Text from a stateful widget!"),),
+    );
   }
 }

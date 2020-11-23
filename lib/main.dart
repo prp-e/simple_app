@@ -23,6 +23,7 @@ class HomePage extends StatefulWidget {
 class _HomePage extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Stateful app!")),
       body: Center(
         child: Text("Text from a stateful widget!"),
       ),

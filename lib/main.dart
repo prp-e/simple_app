@@ -6,5 +6,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {}
+  Widget build(BuildContext context) {
+    MaterialApp(
+        title: 'Simple App',
+        theme: ThemeData(primaryColor: Colors.green[500]),
+        home: Scaffold(
+          appBar: AppBar(title: Text("A simple app!")),
+        ));
+  }
 }

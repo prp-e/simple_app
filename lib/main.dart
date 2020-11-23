@@ -7,13 +7,13 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    MaterialApp(
+    return MaterialApp(
         title: 'Simple App',
         theme: ThemeData(primaryColor: Colors.green[500]),
         home: Scaffold(
             appBar: AppBar(title: Text("A simple app!")),
             body: Center(
-              child: Text("This is my app!"),
+              child: Text("This is my app! Really?"),
             )));
   }
 }

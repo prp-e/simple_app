@@ -46,19 +46,24 @@ class _HomePage extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  FloatingActionButton(
-                    onPressed: () {
-                      _increase_counter();
-                    },
-                    backgroundColor: Colors.green[600],
-                    child: Icon(Icons.plus_one),
-                  ),
-                  FloatingActionButton(
+                  Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: FloatingActionButton(
                       onPressed: () {
-                        _resetCounter();
+                        _increase_counter();
                       },
                       backgroundColor: Colors.green[600],
-                      child: Icon(Icons.refresh)),
+                      child: Icon(Icons.plus_one),
+                    ),
+                  ),
+                  Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: FloatingActionButton(
+                          onPressed: () {
+                            _resetCounter();
+                          },
+                          backgroundColor: Colors.green[600],
+                          child: Icon(Icons.refresh))),
                 ],
               )
             ]),

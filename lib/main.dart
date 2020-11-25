@@ -40,7 +40,9 @@ class _HomePage extends State<HomePage> {
       ),
       appBar: AppBar(title: Text("Stateful app!")),
       body: Center(
-        child: Text("Text from a stateful widget!"),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[Text("You pressed the button $count times!")]),
       ),
     );
   }

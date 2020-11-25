@@ -21,8 +21,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePage extends State<HomePage> {
+  int count = 0;
+
+  void _increase_counter() {
+    setState(() {
+      count++;
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _increase_counter();
+        },
+        backgroundColor: Colors.green[600],
+        child: Icon(Icons.plus_one),
+      ),
       appBar: AppBar(title: Text("Stateful app!")),
       body: Center(
         child: Text("Text from a stateful widget!"),

@@ -29,6 +29,12 @@ class _HomePage extends State<HomePage> {
     });
   }
 
+  void _resetCounter() {
+    setState(() {
+      count = 0;
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
@@ -42,7 +48,14 @@ class _HomePage extends State<HomePage> {
       body: Center(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[Text("You pressed the button $count times!")]),
+            children: <Widget>[
+              Text("You pressed the button $count times!"),
+              RaisedButton(
+                  onPressed: () {
+                    _resetCounter();
+                  },
+                  child: Text("Reset"))
+            ]),
       ),
     );
   }

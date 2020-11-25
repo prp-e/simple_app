@@ -37,26 +37,30 @@ class _HomePage extends State<HomePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _increase_counter();
-        },
-        backgroundColor: Colors.green[600],
-        child: Icon(Icons.plus_one),
-      ),
       appBar: AppBar(title: Text("Stateful app!")),
       body: Center(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text("You pressed the button $count times!"),
-              RaisedButton(
-                  onPressed: () {
-                    _resetCounter();
-                  },
-                  color: Colors.green[600],
-                  textColor: Colors.white,
-                  child: Text("Reset"))
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  FloatingActionButton(
+                    onPressed: () {
+                      _increase_counter();
+                    },
+                    backgroundColor: Colors.green[600],
+                    child: Icon(Icons.plus_one),
+                  ),
+                  FloatingActionButton(
+                      onPressed: () {
+                        _resetCounter();
+                      },
+                      backgroundColor: Colors.green[600],
+                      child: Icon(Icons.refresh)),
+                ],
+              )
             ]),
       ),
     );

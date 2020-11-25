@@ -54,6 +54,8 @@ class _HomePage extends State<HomePage> {
                   onPressed: () {
                     _resetCounter();
                   },
+                  color: Colors.green[600],
+                  textColor: Colors.white,
                   child: Text("Reset"))
             ]),
       ),
